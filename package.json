@@ -1,0 +1,27 @@
+{
+  "name": "mvr_api_server",
+  "version": "1.0.0",
+  "description": "web server loging biosignal data to mongodb",
+  "main": "server.js",
+  "scripts": {
+    "test": "test.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PulseraMartin/mvrAPIServer.git"
+  },
+  "author": "Jorge Gaete V.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PulseraMartin/mvrAPIServer/issues"
+  },
+  "homepage": "https://github.com/PulseraMartin/mvrAPIServer#readme",
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.6"
+  }
+}
