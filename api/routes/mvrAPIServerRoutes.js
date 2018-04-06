@@ -11,6 +11,9 @@ module.exports = function(app){
   .get(mvrAPIServerController.list_all_packages)
   .post(mvrAPIServerController.package_post);
 
+  app.route('/getTemperatureRecord')
+  .get(mvrAPIServerController.list_temperature);
+
   app.route('/tasks/:taskId')
   .get(mvrAPIServerController.read_a_task)
   .put(mvrAPIServerController.update_a_task);
