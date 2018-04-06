@@ -38,11 +38,13 @@ exports.list_all_tasks = function(req, res){
 //
 // GET METHOD
 exports.list_temperature = function(req, res){
-  Task.find({sensor: "temperature"}, function(err, task){
+  DataPackage.find({'sensor': 'temperature'}, function(err, task){
     if(err)
       res.send();
     res.json(task);
-  });
+  }).
+  limit(10).
+  sort({ package_timestamp: -1 });
 };
 //
 
