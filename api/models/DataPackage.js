@@ -7,7 +7,7 @@ var DatapackageSchema = new Schema({
   user_id: {type: String,required: 'Please enter user ID'},
   package_timestamp: {type: String,required: 'Please enter package timestamp'},
   // sensor: {type: [{type: String,enum: ['ppg','inertial','eda']}]},
-  sensor: {type: [{type: String,enum: ['ppg','accelerometer','gyroscope','eda']}]},
+  sensor: {type: [{type: String,enum: ['ppg','accelerometer','gyroscope','eda', 'temperature']}]},
   package_data: {type: String,default: 'NA'},
   Created_at: {type: Date,defauts: Date.now}
 });
