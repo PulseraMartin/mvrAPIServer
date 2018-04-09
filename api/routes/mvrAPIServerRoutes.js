@@ -17,7 +17,7 @@ module.exports = function(app){
   app.route('/getAccelRecord')
   .get(mvrAPIServerController.list_accel);
 
-  app.route('/getGytoRecord')
+  app.route('/getGyroRecord')
   .get(mvrAPIServerController.list_gyro);
 
   app.route('/tasks/:taskId')
