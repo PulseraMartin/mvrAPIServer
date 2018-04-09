@@ -14,6 +14,12 @@ module.exports = function(app){
   app.route('/getTemperatureRecord')
   .get(mvrAPIServerController.list_temperature);
 
+  app.route('/getAccelRecord')
+  .get(mvrAPIServerController.list_accel);
+
+  app.route('/getGytoRecord')
+  .get(mvrAPIServerController.list_gyro);
+
   app.route('/tasks/:taskId')
   .get(mvrAPIServerController.read_a_task)
   .put(mvrAPIServerController.update_a_task);

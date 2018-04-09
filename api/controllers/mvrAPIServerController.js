@@ -46,6 +46,26 @@ exports.list_temperature = function(req, res){
   limit(10).
   sort({ package_timestamp: -1 });
 };
+
+exports.list_accel = function(req, res){
+  DataPackage.find({'sensor': 'accelerometer'}, function(err, task){
+    if(err)
+      res.send();
+    res.json(task);
+  }).
+  limit(10).
+  sort({ package_timestamp: -1 });
+};
+
+exports.list_gyro = function(req, res){
+  DataPackage.find({'sensor': 'gyroscope'}, function(err, task){
+    if(err)
+      res.send();
+    res.json(task);
+  }).
+  limit(10).
+  sort({ package_timestamp: -1 });
+};
 //
 
 // POST METHOD
