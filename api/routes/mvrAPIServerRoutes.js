@@ -20,6 +20,9 @@ module.exports = function(app){
   app.route('/getGyroRecord')
   .get(mvrAPIServerController.list_gyro);
 
+  app.route('/getEdaRecord')
+  .get(mvrAPIServerController.list_eda);
+
   app.route('/tasks/:taskId')
   .get(mvrAPIServerController.read_a_task)
   .put(mvrAPIServerController.update_a_task);

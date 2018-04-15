@@ -66,6 +66,16 @@ exports.list_gyro = function(req, res){
   limit(10).
   sort({ package_timestamp: -1 });
 };
+
+exports.list_eda = function(req, res){
+  DataPackage.find({'sensor': 'eda'}, function(err, task){
+    if(err)
+      res.send();
+    res.json(task);
+  }).
+  limit(10).
+  sort({ package_timestamp: -1 });
+};
 //
 
 // POST METHOD
