@@ -23,6 +23,9 @@ module.exports = function(app){
   app.route('/getEdaRecord')
   .get(mvrAPIServerController.list_eda);
 
+  app.route('/getPpgRecord')
+  .get(mvrAPIServerController.list_ppg);
+
   app.route('/tasks/:taskId')
   .get(mvrAPIServerController.read_a_task)
   .put(mvrAPIServerController.update_a_task);

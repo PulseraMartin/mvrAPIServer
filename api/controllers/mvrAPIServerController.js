@@ -37,6 +37,16 @@ exports.list_all_tasks = function(req, res){
 
 //
 // GET METHOD
+exports.list_ppg = function(req, res){
+  DataPackage.find({'sensor': 'ppg'}, function(err, task){
+    if(err)
+      res.send();
+    res.json(task);
+  }).
+  limit(10).
+  sort({ package_timestamp: -1 });
+};
+
 exports.list_temperature = function(req, res){
   DataPackage.find({'sensor': 'temperature'}, function(err, task){
     if(err)
